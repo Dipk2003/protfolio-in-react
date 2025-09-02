@@ -1,0 +1,298 @@
+/* Global Responsive Styles */
+
+/* Mobile-first approach */
+* {
+  box-sizing: border-box;
+}
+
+/* Improved touch targets for mobile - only for interactive elements */
+input[type="text"], input[type="email"], select, textarea {
+  min-height: 44px;
+}
+
+/* Mobile Menu Animations */
+.mobile-menu {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Spacing */
+.section-padding {
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 5rem 2rem;
+  }
+}
+
+/* Card Responsive Styles */
+.card-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(10px);
+}
+
+/* Typography Responsive Scaling */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.4;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* Interactive Components Mobile Styles */
+.code-editor-container,
+.algorithm-visualizer,
+.skills-galaxy {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Algorithm Visualizer Mobile Adjustments */
+@media (max-width: 768px) {
+  .algorithm-visualizer .visualizer-section {
+    padding: 0.75rem;
+  }
+  
+  .algorithm-visualizer .visualization-area {
+    height: 16rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .algorithm-visualizer .bar {
+    min-width: 3px;
+    max-width: 12px;
+  }
+}
+
+/* Skills Galaxy Mobile Adjustments */
+@media (max-width: 768px) {
+  .skills-galaxy .galaxy-container {
+    height: 16rem;
+  }
+  
+  .skill-sphere {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 0.75rem;
+  }
+  
+  .skill-icon {
+    font-size: 16px !important;
+  }
+  
+  .skill-name {
+    font-size: 8px !important;
+  }
+  
+  .skill-level {
+    font-size: 6px !important;
+  }
+}
+
+/* Code Editor Mobile Adjustments */
+@media (max-width: 768px) {
+  .code-editor-container .monaco-editor {
+    font-size: 12px !important;
+  }
+  
+  .editor-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .language-selector,
+  .theme-selector {
+    width: 100%;
+  }
+}
+
+/* Chat Widget Mobile Adjustments */
+@media (max-width: 640px) {
+  .chat-widget {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    left: 1rem !important;
+    width: auto !important;
+    max-height: 70vh;
+  }
+  
+  .chat-toggle-button {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Form Controls Mobile */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: none;
+}
+
+/* Mobile Scroll Improvements */
+@media (max-width: 768px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Improve tap targets */
+  .feature-card,
+  .skill-card,
+  .project-card {
+    padding: 1rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* Better spacing on mobile */
+  .grid {
+    gap: 0.75rem !important;
+  }
+  
+  /* Mobile-friendly buttons */
+  button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Mobile typography adjustments */
+  .text-hero {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+  }
+  
+  .text-sub-hero {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+}
+
+/* Tablet Specific Styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section-padding {
+    padding: 3rem 2rem;
+  }
+  
+  /* Tablet grid adjustments */
+  .tablet-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tablet-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp images and text on retina displays */
+  img, svg {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: dark) {
+  /* Ensure good contrast on dark devices */
+  .text-white-50 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .text-white-70 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+button:focus,
+input:focus,
+select:focus,
+a:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .chat-widget,
+  .back-to-top,
+  .theme-toggle {
+    display: none !important;
+  }
+}
