@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { sendEmail, sendAutoReply } from "../services/emailService";
+import EmailJSDebugger from "../components/EmailJSDebugger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -395,6 +396,9 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+      
+      {/* EmailJS Debugger - only shows in development */}
+      <EmailJSDebugger />
     </div>
   );
 };
